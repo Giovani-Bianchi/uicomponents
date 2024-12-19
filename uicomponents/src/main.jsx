@@ -1,10 +1,14 @@
+// Importação do StrictMode do react
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
 
+// Importação do createRoot para renderizar o componente
+import { createRoot } from 'react-dom/client'
+
+// Criando o root da aplicação
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+
+    // Aplicação envolta do StrictMode
+    <StrictMode>
+    </StrictMode>
+
 )
