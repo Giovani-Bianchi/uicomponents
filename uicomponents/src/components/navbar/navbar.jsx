@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 // Importando os Styled Components do Componente de Home
-import { ComponentsMenu, ComponentsTextIcon, DiscoverButton, GitHubButton, Logo, Nav, NavbarButtons, NavbarItems, StyledLink} from "./navbar.styles.js";
+import { ComponentsMenu, DiscoverButton, GitHubButton, Logo, Nav, NavbarButtons, NavbarItems, StyledLink, TextIcon} from "./navbar.styles.js";
 
 // Importando os ícones do phosphor-icons
 import { CaretDown } from "@phosphor-icons/react";
@@ -33,10 +33,10 @@ function Navbar() {
 
                     {/* Dropdown Menu de Components */}
                     <ComponentsMenu>
-                        <ComponentsTextIcon>
+                        <TextIcon>
                             Components
                             <CaretDown size={16} />
-                        </ComponentsTextIcon>
+                        </TextIcon>
                     </ComponentsMenu>
 
                     {/* Link âncora para o Footer */}

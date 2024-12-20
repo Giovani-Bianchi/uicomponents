@@ -68,7 +68,7 @@ export const StyledLink = styled(Link)`
 export const ComponentsMenu = styled.div``
 
 // Texto e Ícone de Components
-export const ComponentsTextIcon = styled.div.attrs({
+export const TextIcon = styled.div.attrs({
     className: "d-flex align-items-center"
 })`
     color: var(--secondary-dark);
