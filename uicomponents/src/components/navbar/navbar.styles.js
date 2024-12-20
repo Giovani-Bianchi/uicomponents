@@ -104,6 +104,7 @@ export const DiscoverButton = styled.button`
     // Hover State
     &:hover {
         background: linear-gradient(270deg, rgba(181, 75, 210, 0.10) 0%, rgba(247, 235, 252, 0.10) 100%);
+        transition: 0.25s;
     }
 `;
 
@@ -131,5 +132,6 @@ export const GitHubButton = styled.button.attrs({
     // Hover State
     &:hover {
         color: var(--lightest);
+        transition: 0.25s;
     }
 `;
