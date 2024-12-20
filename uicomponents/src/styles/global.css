@@ -52,7 +52,8 @@ body {
     margin-top: 100px;
 }
 
-/* Removendo o padding padrão dos container */
+/* Removendo o padding padrão dos container e inserindo espaçamento inferior padrão */
 .container {
     padding: 0;
+    margin-bottom: 50px;
 }
