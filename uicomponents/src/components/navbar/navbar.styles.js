@@ -118,6 +118,7 @@ export const GitHubButton = styled.button.attrs({
     font-size: 16px;
     font-weight: var(--medium);
 
+    border: none;
     border-radius: 8px;
 
     height: 40px;
