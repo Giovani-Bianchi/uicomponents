@@ -29,11 +29,11 @@
     --lightest: #F7EBFC;
 
     /* Secondary Colors */
-    --dark-secondary: #0E0E0F;
-    --medium-secondary: #434347;
-    --pure-secondary: #595961;
-    --light-secondary: #84858C;
-    --lightest-secondary: #CFD0D2;
+    --secondary-dark: #0E0E0F;
+    --secondary-medium: #434347;
+    --secondary-pure: #595961;
+    --secondary-light: #84858C;
+    --secondary-lightest: #CFD0D2;
 
     /* Gray Color */
     --gray: #F4F4F4;
@@ -45,4 +45,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Margin top para afastar o conteúdo da main do header com posição fixa da aplicação */
+body {
+    margin-top: 100px;
+}
+
+/* Removendo o padding padrão dos container */
+.container {
+    padding: 0;
 }
