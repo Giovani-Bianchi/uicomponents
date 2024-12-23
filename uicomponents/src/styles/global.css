@@ -13,9 +13,9 @@
     /* Font Weights */
     --thin: 100;
     --extra-light: 200;
-    --light: 300;
+    --fw-light: 300;
     --regular: 400;
-    --medium: 500;
+    --fw-medium: 500;
     --semi-bold: 600;
     --bold: 700;
     --extra-bold: 800;
@@ -52,8 +52,7 @@ body {
     margin-top: 100px;
 }
 
-/* Removendo o padding padrão dos container e inserindo espaçamento inferior padrão */
-.container {
-    padding: 0;
-    margin-bottom: 50px;
+/* Definindo 50px de espaçamento superior e inferior para toda section */
+section {
+    padding: 50px 0;
 }
