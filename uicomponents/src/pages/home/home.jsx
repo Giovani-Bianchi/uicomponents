@@ -15,6 +15,7 @@ import laptop from "../../assets/pages/home/laptop.png";
 
 // Importando os componentes
 import Navbar from "../../components/navbar/navbar.jsx";
+import Footer from "../../components/footer/footer.jsx";
 
 function Home() {
 
@@ -290,6 +291,9 @@ function Home() {
             </section>
 
         </main>
+
+        {/* Importação do Footer */}
+        <Footer />
 
     </>
 
