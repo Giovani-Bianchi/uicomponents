@@ -61,6 +61,13 @@ export const CTAButton = styled.button`
     }
 `;
 
+// Line Title
+export const LineTitle = styled.div.attrs({
+    className: "d-flex flex-column"
+})`
+    margin-bottom: 50px;
+`;
+
 /* --------------------------------------------------------------------------------------------------------
  * Hero Section
 ---------------------------------------------------------------------------------------------------------- */
@@ -75,13 +82,6 @@ export const HeroContent = styled.div.attrs({
 /* --------------------------------------------------------------------------------------------------------
  * Features Section
 ---------------------------------------------------------------------------------------------------------- */
-
-// Features Title
-export const FeaturesTitle = styled.div.attrs({
-    className: "d-flex flex-column"
-})`
-    margin-bottom: 50px;
-`;
 
 // Features
 export const Features = styled.div.attrs({
@@ -353,4 +353,31 @@ export const Badge = styled.a.attrs({
         transform: scale(1.05);
         transition: 0.1s;
     }
+`;
+
+/* --------------------------------------------------------------------------------------------------------
+ * Do it your way Section
+---------------------------------------------------------------------------------------------------------- */
+
+// Do it your way Content
+export const DoItYourWayContent = styled.div.attrs({
+    className: 'row'
+})``;
+
+// CTA Content
+export const CTAContent = styled.div.attrs({
+    className: "col-6 d-flex flex-column"
+})`
+    gap: 24px;
+`;
+
+// Laptop Div
+export const LaptopDiv = styled.div.attrs({
+    className: "col-6 d-flex justify-content-end"
+})``;
+
+// Laptop Image
+export const LaptopImage = styled.img`
+    height: 200px;
+    transform: rotate(-22deg);
 `;

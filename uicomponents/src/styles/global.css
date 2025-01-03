@@ -47,6 +47,11 @@
     box-sizing: border-box;
 }
 
+/* html ocupando 100% da página */
+html {
+    height: 100%
+}
+
 /* Margin top para afastar o conteúdo da main do header com posição fixa da aplicação */
 body {
     margin-top: 100px;
@@ -65,4 +70,14 @@ section {
 #hero-section {
     padding-top: 50px;
     padding-bottom: 100px;
+}
+
+/* Removendo o padding da technologies section */
+#technologies-section {
+    padding: 0px;
+}
+
+/* Removendo o padding da do it your way section */
+#do-it-your-way-section {
+    padding: 0px;
 }

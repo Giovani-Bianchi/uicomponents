@@ -1,14 +1,17 @@
 // Importando os Styled Components do Componente de Home
-import { Badge, CheckboxCheckmark, CheckboxContainer, CTAButton, Feature, FeatureButton, FeatureDemo, FeatureExample, Features, FeaturesRow, FeaturesText, FeaturesTitle, HeroContent, LargeFeature, PurpleLink, RadioButtonCheckmark, RadioButtonContainer, SmallFeature, TechnologiesBadges, TechnologiesContent, Text, TitleAndText, TitleH1, TitleH2, TitleH3 } from "./home.styles.js"
+import { Badge, CheckboxCheckmark, CheckboxContainer, CTAButton, CTAContent, DoItYourWayContent, Feature, FeatureButton, FeatureDemo, FeatureExample, Features, FeaturesRow, FeaturesText, HeroContent, LaptopDiv, LaptopImage, LargeFeature, LineTitle, PurpleLink, RadioButtonCheckmark, RadioButtonContainer, SmallFeature, TechnologiesBadges, TechnologiesContent, Text, TitleAndText, TitleH1, TitleH2, TitleH3 } from "./home.styles.js"
 
 // Importando o Styled Components Global
-import { Container, ContainerFluid, FlexCenterDiv, Row } from "../../styles/global.styles.js"
+import { Container, ContainerFluid, DoItYourWayContainerFluid, FlexCenterDiv, Row } from "../../styles/global.styles.js"
 
 // Importações dos ícones do phosphor-icons
 import { ArrowRight } from "@phosphor-icons/react";
 
 // Importações dos ícones do react-icons
 import { FaBootstrap, FaReact } from "react-icons/fa";
+
+// Importação das imagens
+import laptop from "../../assets/pages/home/laptop.png";
 
 // Importando os componentes
 import Navbar from "../../components/navbar/navbar.jsx";
@@ -46,12 +49,12 @@ function Home() {
                 <Container>
 
                     {/* Título de Features */}
-                    <FeaturesTitle>
+                    <LineTitle>
                         <TitleH2>FEATURES</TitleH2>
                         <svg xmlns="http://www.w3.org/2000/svg" width="56" height="12" viewBox="0 0 56 12" fill="none">
                             <path d="M55.7735 6L50 0.226497L44.2265 6L50 11.7735L55.7735 6ZM0 7H50V5H0V7Z" fill="#B54BD2"/>
                         </svg>
-                    </FeaturesTitle>
+                    </LineTitle>
 
                     {/* Features */}
                     <Features>
@@ -245,6 +248,45 @@ function Home() {
                     </Container>
 
                 </ContainerFluid>
+            </section>
+
+            {/* Do it your way Section */}
+            <section id="do-it-your-way-section">
+                <DoItYourWayContainerFluid>
+
+                    <Container>
+                        
+                        {/* Título de Feel Free */}
+                        <LineTitle>
+                            <TitleH2>FEEL FREE</TitleH2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="12" viewBox="0 0 56 12" fill="none">
+                                <path d="M55.7735 6L50 0.226497L44.2265 6L50 11.7735L55.7735 6ZM0 7H50V5H0V7Z" fill="#B54BD2"/>
+                            </svg>
+                        </LineTitle>
+
+                        {/* Do it your way Content */}
+                        <DoItYourWayContent>
+
+                            {/* Call to Action Content */}
+                            <CTAContent>
+                                <TitleH1>Do it your way!</TitleH1>
+                                <Text $fontSize="16px">With our flexible components, you have the freedom to design exactly how you envision. Customize, tweak, and build with endless possibilities to match your unique style and needs.</Text>
+                                <CTAButton>
+                                    Find out how
+                                    <ArrowRight size={24} style={{marginLeft: 4}} />
+                                </CTAButton>
+                            </CTAContent>
+
+                            {/* Laptop Image */}
+                            <LaptopDiv>
+                                <LaptopImage src={laptop} alt="Laptop Image" />
+                            </LaptopDiv>
+
+                        </DoItYourWayContent>
+
+                    </Container>
+
+                </DoItYourWayContainerFluid>
             </section>
 
         </main>
