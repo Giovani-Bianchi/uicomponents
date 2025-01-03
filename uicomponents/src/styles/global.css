@@ -52,7 +52,17 @@ body {
     margin-top: 100px;
 }
 
-/* Definindo 50px de espaçamento superior e inferior para toda section */
+/* Definindo 50px de espaçamento inferior para toda section */
 section {
-    padding: 50px 0;
+    padding-bottom: 50px;
+}
+
+/* --------------------------------------------------------------------------------------------------------
+ * Home
+---------------------------------------------------------------------------------------------------------- */
+
+/* Definindo 50px de espaçamento superior e 100px de espaçamento inferior para a hero section */
+#hero-section {
+    padding-top: 50px;
+    padding-bottom: 100px;
 }

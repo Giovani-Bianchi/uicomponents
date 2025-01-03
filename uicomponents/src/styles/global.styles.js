@@ -10,6 +10,13 @@ export const Container = styled.div.attrs({
     className: "container"
 })``;
 
+// Container Fluid
+export const ContainerFluid = styled.div.attrs({
+    className: "container-fluid"
+})`
+    background-color: ${props => props.$backgroundColor};
+`;
+
 // Row
 export const Row = styled.div.attrs({
     className: "row"

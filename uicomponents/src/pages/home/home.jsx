@@ -1,11 +1,14 @@
 // Importando os Styled Components do Componente de Home
-import { CheckboxCheckmark, CheckboxContainer, CTAButton, Feature, FeatureButton, FeatureDemo, FeatureExample, Features, FeaturesRow, FeaturesText, FeaturesTitle, HeroContent, LargeFeature, PurpleLink, RadioButtonCheckmark, RadioButtonContainer, SmallFeature, Text, TitleAndText, TitleH1, TitleH2, TitleH3 } from "./home.styles.js"
+import { Badge, CheckboxCheckmark, CheckboxContainer, CTAButton, Feature, FeatureButton, FeatureDemo, FeatureExample, Features, FeaturesRow, FeaturesText, FeaturesTitle, HeroContent, LargeFeature, PurpleLink, RadioButtonCheckmark, RadioButtonContainer, SmallFeature, TechnologiesBadges, TechnologiesContent, Text, TitleAndText, TitleH1, TitleH2, TitleH3 } from "./home.styles.js"
 
 // Importando o Styled Components Global
-import { Container, FlexCenterDiv, Row } from "../../styles/global.styles.js"
+import { Container, ContainerFluid, FlexCenterDiv, Row } from "../../styles/global.styles.js"
 
 // Importações dos ícones do phosphor-icons
 import { ArrowRight } from "@phosphor-icons/react";
+
+// Importações dos ícones do react-icons
+import { FaBootstrap, FaReact } from "react-icons/fa";
 
 // Importando os componentes
 import Navbar from "../../components/navbar/navbar.jsx";
@@ -195,6 +198,53 @@ function Home() {
 
                     </Features>
                 </Container>
+            </section>
+
+            {/* Technologies Section */}
+            <section id="technologies-section">
+                <ContainerFluid $backgroundColor="var(--secondary-dark)">
+
+                    <Container>
+                        <Row>
+
+                            {/* Conteúdo da Technologies */}
+                            <FlexCenterDiv $padding="100px 0px">
+                                <TechnologiesContent>
+
+                                    {/* Title e Text */}
+                                    <TitleH1 $fontSize="40px" $textColor="var(--gray)">Technologies used to build the Components</TitleH1>
+                                    <Text $fontSize="16px" $textColor="var(--gray)">Explore the powerful technologies behind our components, crafted with the best tools for seamless performance and scalability.</Text>
+
+                                    {/* Technologies Badges */}
+                                    <TechnologiesBadges>
+                                        
+                                        {/* React Badge */}
+                                        <Badge href="https://react.dev/" target="_blank" rel="noopener noreferrer">
+                                            <FaReact size={24} color={"var(--pure)"} />
+                                            <Text $fontSize="16px" $textColor="var(--pure)">React</Text>
+                                        </Badge>
+
+                                        {/* Styled Components Badge */}
+                                        <Badge href="https://styled-components.com/" target="_blank" rel="noopener noreferrer">
+                                            💅
+                                            <Text $fontSize="16px" $textColor="var(--pure)">Styled Components</Text>
+                                        </Badge>
+
+                                        {/* Bootstrap Badge */}
+                                        <Badge href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
+                                            <FaBootstrap size={24} color={"var(--pure)"} />
+                                            <Text $fontSize="16px" $textColor="var(--pure)">Bootstrap</Text>
+                                        </Badge>
+                                        
+                                    </TechnologiesBadges>
+
+                                </TechnologiesContent>
+                            </FlexCenterDiv>
+                            
+                        </Row>
+                    </Container>
+
+                </ContainerFluid>
             </section>
 
         </main>

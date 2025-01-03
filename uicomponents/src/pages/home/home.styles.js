@@ -251,8 +251,7 @@ export const RadioButtonCheckmark = styled.span`
 `;
 
 // RadioButton Container
-export const RadioButtonContainer = styled.label.attrs({
-})`
+export const RadioButtonContainer = styled.label`
     display: block;
     position: relative;
     
@@ -312,5 +311,46 @@ export const PurpleLink = styled.span`
     &:hover {
         color: var(--medium);
         transition: 0.25s;
+    }
+`;
+
+/* --------------------------------------------------------------------------------------------------------
+ * Technologies Section
+---------------------------------------------------------------------------------------------------------- */
+
+// Technologies Content
+export const TechnologiesContent = styled.div.attrs({
+    className: 'd-flex flex-column text-center'
+})`
+    gap: 24px;
+`;
+
+// Technologies Badges
+export const TechnologiesBadges = styled.div.attrs({
+    className: "d-flex justify-content-center"
+})`
+    gap: 24px;
+`;
+
+// Badge
+export const Badge = styled.a.attrs({
+    className: 'd-flex align-items-center justify-content-center'
+})`
+    padding: 6px 16px;
+    gap: 6px;
+
+    border: 1px solid var(--dark);
+    border-radius: 8px;
+
+    box-shadow: -1px 1px 8px 0px var(--pure);
+
+    text-decoration: none;
+
+    transition: 0.1s;
+
+    // Hover State
+    &:hover {
+        transform: scale(1.05);
+        transition: 0.1s;
     }
 `;
