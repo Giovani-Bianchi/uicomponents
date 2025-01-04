@@ -69,6 +69,29 @@ export const LineTitle = styled.div.attrs({
 `;
 
 /* --------------------------------------------------------------------------------------------------------
+ * Gradient Circles
+---------------------------------------------------------------------------------------------------------- */
+
+// Gradient Circle
+export const GradientCircle = styled.div`
+    position: absolute;
+
+    top: ${props => props.$top};
+    left: ${props => props.$left};
+
+    width: ${props => props.$width};
+    height: ${props => props.$height};
+
+    border-radius: 50%;
+
+    background: radial-gradient(50% 50% at 50% 50%, #F7EBFC 10%, #E3B7F0 100%);
+    filter: blur(100px);
+
+    pointer-events: none;
+    z-index: -1;
+`;
+
+/* --------------------------------------------------------------------------------------------------------
  * Hero Section
 ---------------------------------------------------------------------------------------------------------- */
 

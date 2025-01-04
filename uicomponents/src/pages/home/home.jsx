@@ -1,5 +1,5 @@
 // Importando os Styled Components do Componente de Home
-import { Badge, CheckboxCheckmark, CheckboxContainer, CTAButton, CTAContent, DoItYourWayContent, Feature, FeatureButton, FeatureDemo, FeatureExample, Features, FeaturesRow, FeaturesText, HeroContent, LaptopDiv, LaptopImage, LargeFeature, LineTitle, PurpleLink, RadioButtonCheckmark, RadioButtonContainer, SmallFeature, TechnologiesBadges, TechnologiesContent, Text, TitleAndText, TitleH1, TitleH2, TitleH3 } from "./home.styles.js"
+import { Badge, CheckboxCheckmark, CheckboxContainer, CTAButton, CTAContent, DoItYourWayContent, Feature, FeatureButton, FeatureDemo, FeatureExample, Features, FeaturesRow, FeaturesText, GradientCircle, HeroContent, LaptopDiv, LaptopImage, LargeFeature, LineTitle, PurpleLink, RadioButtonCheckmark, RadioButtonContainer, SmallFeature, TechnologiesBadges, TechnologiesContent, Text, TitleAndText, TitleH1, TitleH2, TitleH3 } from "./home.styles.js"
 
 // Importando o Styled Components Global
 import { Container, ContainerFluid, DoItYourWayContainerFluid, FlexCenterDiv, Row } from "../../styles/global.styles.js"
@@ -29,6 +29,21 @@ function Home() {
 
             {/* Hero Section */}
             <section id="hero-section">
+
+                {/* Gradient Circles */}
+
+                {/* Large Gradient Circle Left */}
+                <GradientCircle $width="500px" $height="500px" $top="5%" $left="10%" />
+
+                {/* Small Gradient Circle Top Middle */}
+                <GradientCircle $width="250px" $height="250px" $top="5%" $left="45%" />
+
+                {/* Small Gradient Circle Top Right */}
+                <GradientCircle $width="250px" $height="250px" $top="5%" $left="75%" />
+
+                {/* Large Gradient Circle Right */}
+                <GradientCircle $width="500px" $height="500px" $top="20%" $left="60%" />
+
                 <Container>
                     <Row>
 
@@ -47,6 +62,12 @@ function Home() {
 
             {/* Features Section */}
             <section id="features-section">
+
+                {/* Gradient Circle */}
+
+                {/* Large Gradient Circle Middle */}
+                <GradientCircle $width="500px" $height="500px" $top="100%" $left="35%" />
+
                 <Container>
 
                     {/* Título de Features */}

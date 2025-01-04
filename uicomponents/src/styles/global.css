@@ -36,7 +36,7 @@
     --secondary-lightest: #CFD0D2;
 
     /* Gray Color */
-    --gray: #F4F4F4;
+    --gray: #FFFFFF;
 }
 
 /* Estilos para todos os elementos da aplicação */
@@ -49,7 +49,7 @@
 
 /* html ocupando 100% da página */
 html {
-    height: 100%
+    height: 100%;
 }
 
 /* Margin top para afastar o conteúdo da main do header com posição fixa da aplicação */
