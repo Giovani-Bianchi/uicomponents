@@ -8,6 +8,19 @@ import { Link } from "react-router-dom";
  * Navbar
 ---------------------------------------------------------------------------------------------------------- */
 
+// Header
+export const Header = styled.header.attrs({
+    className: "fixed-top"
+})`
+    transition: 0.25s ease-in-out;
+
+    /* Alterando a background color do header quando a classe scrolled for adicionada com o JS */
+    &.scrolled {
+        background-color: var(--gray);
+        box-shadow: 0px 2px 8px 0px rgba(14, 14, 15, 0.25);
+    }
+`;
+
 // Nav
 export const Nav = styled.nav.attrs({
     className: "container d-flex justify-content-between align-items-center"
