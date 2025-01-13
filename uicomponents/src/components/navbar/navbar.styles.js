@@ -77,8 +77,62 @@ export const StyledLink = styled(Link)`
     }
 `;
 
-// Menu de Components
-export const ComponentsMenu = styled.div``
+// Dropdown de Components
+export const ComponentsDropdown = styled.div`
+    position: relative;
+
+    // Transition
+    .arrow-icon {
+        transition: transform 0.15s ease-in-out;
+    }
+
+    // Hover State
+    &:hover .arrow-icon {
+        transform: rotate(180deg);
+    }
+`;
+
+// Dropdown Menu
+export const DropdownMenu = styled.div`
+    position: absolute;
+    left: 0;
+    top: calc(100% + 10px);
+
+    padding: 16px;
+
+    background: var(--gray);
+
+    border: 1px solid var(--medium);
+    border-radius: 8px;
+
+    box-shadow: 0px 1px 8px 0px var(--medium);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transform: translateY(-10px);
+
+    transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+
+    /* Manter visível quando houver hover no TextIcon ou DropdownMenu */
+    ${ComponentsDropdown}:hover & {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    /* Cria um espaço invisível para hover */
+    &::before {
+        content: '';
+        position: absolute;
+
+        left: 0;
+        top: -11px;
+
+        width: 100%;
+        height: 10px;
+    }
+`;
 
 // Texto e Ícone de Components
 export const TextIcon = styled.div.attrs({
@@ -86,6 +140,72 @@ export const TextIcon = styled.div.attrs({
 })`
     color: var(--secondary-dark);
     text-decoration: none;
+
+    gap: 2px;
+
+    cursor: pointer;
+`;
+
+// Menu Rows
+export const MenuRows = styled.div.attrs({
+    className: "d-flex flex-column"
+})`
+    gap: 10px;
+`;
+
+// Menu Row
+export const MenuRow = styled.div.attrs({
+    className: "d-flex"
+})`
+    gap: 10px;
+`;
+
+// Menu Button
+export const MenuButton = styled.a.attrs({
+    className: "d-flex justify-content-between align-items-center"
+})`
+    width: 200px;
+
+    background: linear-gradient(270deg, rgba(181, 75, 210, 0.10) 0%, rgba(247, 235, 252, 0.10) 100%);
+
+    padding: 6px 10px;
+
+    text-decoration: none;
+
+    border: 2px solid var(--medium);
+    border-radius: 8px;
+
+    box-shadow: -2px 2px 8px 0px rgba(227, 183, 240, 0.20);
+
+    transition: transform 0.1s ease-in-out;
+
+    // Hover State
+    &:hover {
+        transform: scale(1.05);
+    }
+`;
+
+// Menu Text Icon
+export const MenuTextIcon = styled.div.attrs({
+    className: "d-flex"
+})`
+    color: var(--secondary-dark);
+
+    gap: 4px;
+`;
+
+// Counter
+export const Counter = styled.div`
+    color: var(--medium);
+    background-color: var(--light);
+
+    font-size: 14px;
+    font-weight: var(--fw-medium);
+
+    padding: 2px 4px;
+    
+    border: 1px solid var(--medium);
+    border-radius: 8px;
 `;
 
 // Navbar Buttons

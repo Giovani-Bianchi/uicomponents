@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 // Importando os Styled Components do Componente de Home
-import { ComponentsMenu, DiscoverButton, GitHubButton, Header, Logo, Nav, NavbarButtons, NavbarItems, StyledLink, TextIcon} from "./navbar.styles.js";
+import { ComponentsDropdown, Counter, DiscoverButton, DropdownMenu, GitHubButton, Header, Logo, MenuButton, MenuRow, MenuRows, MenuTextIcon, Nav, NavbarButtons, NavbarItems, StyledLink, TextIcon} from "./navbar.styles.js";
 
 // Importando os ícones do phosphor-icons
-import { CaretDown } from "@phosphor-icons/react";
+import { ArrowSquareOut, CaretDown } from "@phosphor-icons/react";
 
 // Importando os ícones do react-icons
 import { ImGithub } from "react-icons/im";
@@ -56,13 +56,69 @@ function Navbar() {
                     {/* Link para a página Docs */}
                     <StyledLink>Docs</StyledLink>
 
-                    {/* Dropdown Menu de Components */}
-                    <ComponentsMenu>
+                    {/* Dropdown de Components */}
+                    <ComponentsDropdown>
+
+                        {/* Texto e Ícone do Dropdown */}
                         <TextIcon>
                             Components
-                            <CaretDown size={16} />
+                            <CaretDown size={16} className="arrow-icon" />
                         </TextIcon>
-                    </ComponentsMenu>
+
+                        {/* Menu do Dropdown */}
+                        <DropdownMenu>
+                            <MenuRows>
+
+                                {/* Linha 1 do Menu */}
+                                <MenuRow>
+
+                                    {/* Buttons */}
+                                    <MenuButton href="#">
+                                        <MenuTextIcon>
+                                            <ArrowSquareOut size={22} />
+                                            Buttons
+                                        </MenuTextIcon>
+                                        <Counter>00</Counter>
+                                    </MenuButton>
+
+                                    {/* Checkboxes */}
+                                    <MenuButton href="#">
+                                        <MenuTextIcon>
+                                            <ArrowSquareOut size={22} />
+                                            Checkboxes
+                                        </MenuTextIcon>
+                                        <Counter>00</Counter>
+                                    </MenuButton>
+
+                                </MenuRow>
+
+                                {/* Linha 2 do Menu */}
+                                <MenuRow>
+
+                                    {/* Accordions */}
+                                    <MenuButton href="#">
+                                        <MenuTextIcon>
+                                            <ArrowSquareOut size={22} />
+                                            Accordions
+                                        </MenuTextIcon>
+                                        <Counter>00</Counter>
+                                    </MenuButton>
+
+                                    {/* Radio Buttons */}
+                                    <MenuButton href="#">
+                                        <MenuTextIcon>
+                                            <ArrowSquareOut size={22} />
+                                            Radio Buttons
+                                        </MenuTextIcon>
+                                        <Counter>00</Counter>
+                                    </MenuButton>
+
+                                </MenuRow>
+
+                            </MenuRows>
+                        </DropdownMenu>
+
+                    </ComponentsDropdown>
 
                     {/* Link âncora para o Footer */}
                     <StyledLink>Contact</StyledLink>
