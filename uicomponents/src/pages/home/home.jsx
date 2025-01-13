@@ -295,7 +295,7 @@ function Home() {
                                 <Text $fontSize="16px">With our flexible components, you have the freedom to design exactly how you envision. Customize, tweak, and build with endless possibilities to match your unique style and needs.</Text>
                                 <CTAButton>
                                     Find out how
-                                    <ArrowRight size={24} style={{marginLeft: 4}} />
+                                    <ArrowRight size={24} style={{marginLeft: 4}} className="cta-button-icon" />
                                 </CTAButton>
                             </CTAContent>
 

@@ -59,6 +59,16 @@ export const CTAButton = styled.button`
         background-color: var(--medium);
         transition: 0.25s;
     }
+
+    // Transition
+    .cta-button-icon {
+        transition: transform 0.25s ease-in-out;
+    }
+
+    // Hover State do Ícone do CTAButton
+    &:hover .cta-button-icon {
+        transform: translateX(5px);
+    }
 `;
 
 // Line Title
