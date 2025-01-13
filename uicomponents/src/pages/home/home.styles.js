@@ -172,6 +172,8 @@ export const FeatureButton = styled.button`
 
     background-color: ${props => props.$backgroundColor};
     color: var(--lightest);
+
+    pointer-events: none;
 `;
 
 // Feature Example
@@ -215,6 +217,7 @@ export const CheckboxContainer = styled.label.attrs({
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    pointer-events: none;
 
     // Desce o texto da checkbox
     ${Text} {
@@ -285,6 +288,7 @@ export const RadioButtonContainer = styled.label`
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    pointer-events: none;
 
     // Desce o texto do radiobutton
     ${Text} {
