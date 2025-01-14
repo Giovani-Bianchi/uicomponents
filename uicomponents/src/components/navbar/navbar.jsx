@@ -26,8 +26,8 @@ function Navbar({ $gradient }) {
 
         // Função que verifica a posição do scroll e atualiza o estado
         const handleScroll = () => {
-            // Atualiza 'isScrolled' para true se o scrollY for maior que 50, caso contrário, false
-            setIsScrolled(window.scrollY > 50);
+            // Atualiza 'isScrolled' para true se o scrollY for maior que 0, caso contrário, false
+            setIsScrolled(window.scrollY > 0);
         };
 
         // Adiciona o evento de rolagem à janela para disparar a função handleScroll
