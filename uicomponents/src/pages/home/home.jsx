@@ -218,7 +218,7 @@ function Home() {
 
                         {/* CTA Features Text */}
                         <div className="col-md-7 text-center">
-                            <Text $fontWeight="var(--bold)">Discover a glimpse of what we offer! These are just a few of our features — take a look and explore the <PurpleLink>full library</PurpleLink> to unlock even more possibilities.</Text>
+                            <Text $fontWeight="var(--bold)">Discover a glimpse of what we offer! These are just a few of our features — take a look and explore the <PurpleLink to="/components">full library</PurpleLink> to unlock even more possibilities.</Text>
                         </div>
 
                     </Features>

@@ -6,6 +6,7 @@ import GlobalLayout from "./globalLayout.jsx";
 
 // Importando os componentes
 import Home from "./pages/home/home.jsx";
+import Components from "./pages/components/components.jsx";
 
 export function AppRoutes() {
 
@@ -17,6 +18,9 @@ export function AppRoutes() {
 
                     {/* Rota - Tela Home/Landing Page */}
                     <Route path="/" element={<Home />} />
+                    
+                    {/* Rota - Tela Components */}
+                    <Route path="/components" element={<Components />} />
 
                 </Routes>
 

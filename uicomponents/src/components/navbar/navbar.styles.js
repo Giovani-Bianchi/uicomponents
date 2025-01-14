@@ -12,6 +12,8 @@ import { Link } from "react-router-dom";
 export const Header = styled.header.attrs({
     className: "fixed-top"
 })`
+    background: ${props => props.$gradient ? "linear-gradient(270deg, rgba(181, 75, 210, 0.10) 0%, rgba(247, 235, 252, 0.10) 100%)" : "" };
+    
     transition: 0.25s ease-in-out;
 
     /* Alterando a background color do header quando a classe scrolled for adicionada com o JS */
@@ -216,7 +218,10 @@ export const NavbarButtons = styled.div.attrs({
 `;
 
 // Discover Button
-export const DiscoverButton = styled.button`
+export const DiscoverButton = styled(Link).attrs({
+    className: "d-flex align-items-center",
+    to: "/components"
+})`
     background-color: var(--gray);
 
     color: var(--secondary-dark);
@@ -229,6 +234,8 @@ export const DiscoverButton = styled.button`
     height: 40px;
     
     padding: 4px 16px;
+
+    text-decoration: none;
 
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25), -2px 4px 8px 0px rgba(0, 0, 0, 0.25), 0px 1px 4px 0px rgba(0, 0, 0, 0.25) inset;
 

@@ -16,7 +16,7 @@ import { ImGithub } from "react-icons/im";
 // Importação da Logo
 import logo from "../../assets/brand/logo-black-transparent.png"
 
-function Navbar() {
+function Navbar({ $gradient }) {
 
     // Define o estado 'isScrolled' para armazenar se o usuário já rolou a página além de 50px
     const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +42,7 @@ function Navbar() {
 
     return <>
     
-        <Header className={isScrolled ? 'scrolled' : ''}>
+        <Header $gradient={$gradient} className={isScrolled ? 'scrolled' : ''}>
             <Nav>
                 
                 {/* Logo uiComponents */}

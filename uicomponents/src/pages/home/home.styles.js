@@ -1,6 +1,9 @@
 // Importação do styled-components
 import styled from "styled-components";
 
+// Importações do react-router-dom
+import { Link } from "react-router-dom";
+
 /* --------------------------------------------------------------------------------------------------------
  * General
 ---------------------------------------------------------------------------------------------------------- */
@@ -336,9 +339,8 @@ export const RadioButtonContainer = styled.label`
 `;
 
 // Purple Link
-export const PurpleLink = styled.span`
+export const PurpleLink = styled(Link)`
     color: var(--pure);
-    text-decoration: underline;
 
     cursor: pointer;
 

@@ -30,6 +30,7 @@
 
     /* Secondary Colors */
     --secondary-dark: #0E0E0F;
+    --secondary-black: #15161A;
     --secondary-medium: #434347;
     --secondary-pure: #595961;
     --secondary-light: #84858C;
@@ -45,6 +46,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Definindo uma altura mínima pro root */
+#root {
+    min-height: 89.3vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Definindo flex 1 na main */
+main {
+    flex: 1;
 }
 
 /* html ocupando 100% da página */
@@ -80,4 +93,13 @@ section {
 /* Removendo o padding da do it your way section */
 #do-it-your-way-section {
     padding: 0px;
+}
+
+/* --------------------------------------------------------------------------------------------------------
+ * Components
+---------------------------------------------------------------------------------------------------------- */
+
+/* Definindo 50px de espaçamento superior para a components section */
+#components-section {
+    padding-top: 50px;
 }

@@ -39,7 +39,7 @@ function Footer() {
                             <StyledLink>Docs</StyledLink>
 
                             {/* Link para a página Components */}
-                            <StyledLink>Components</StyledLink>
+                            <StyledLink to="/components">Components</StyledLink>
 
                         </FooterItems>
 
