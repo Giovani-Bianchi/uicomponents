@@ -1,8 +1,8 @@
 // Importando os Styled Components do Componente de Components
-import { ComponentsContainer, ComponentsRow, Main, Text, TitleH1, TitleSubtitle } from "./components.styles.js";
+import { ComponentsContainer, ComponentsRow, Text, TitleH1, TitleSubtitle } from "./components.styles.js";
 
 // Importando o Styled Components Global
-import { Container } from "../../styles/global.styles.js";
+import { Container, Main } from "../../styles/global.styles.js";
 
 // Importando os componentes
 import Navbar from "../../components/navbar/navbar.jsx";

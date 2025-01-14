@@ -5,6 +5,11 @@ import styled from "styled-components";
  * General
 ---------------------------------------------------------------------------------------------------------- */
 
+// Main
+export const Main = styled.main`
+    background: linear-gradient(270deg, rgba(181, 75, 210, 0.10) 0%, rgba(247, 235, 252, 0.10) 100%);
+`;
+
 // Container
 export const Container = styled.div.attrs({
     className: "container"
