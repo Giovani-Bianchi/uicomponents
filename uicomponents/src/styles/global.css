@@ -103,3 +103,12 @@ section {
 #components-section {
     padding-top: 50px;
 }
+
+/* --------------------------------------------------------------------------------------------------------
+ * Buttons
+---------------------------------------------------------------------------------------------------------- */
+
+/* Definindo 50px de espaçamento superior para a components section */
+#buttons-section {
+    padding-top: 50px;
+}

@@ -73,7 +73,7 @@ function Navbar({ $gradient }) {
                                 <MenuRow>
 
                                     {/* Buttons */}
-                                    <MenuButton href="#">
+                                    <MenuButton href="/components/buttons">
                                         <MenuTextIcon>
                                             <ArrowSquareOut size={22} />
                                             Buttons
