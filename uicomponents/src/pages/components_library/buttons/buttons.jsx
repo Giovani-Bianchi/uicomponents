@@ -1,8 +1,5 @@
-// Importando os Styled Components do Componente de Buttons
-import { Text, TitleH1, TitleSubtitle } from "./buttons.styles.js";
-
 // Importando o Styled Components Global
-import { Container, ItemsContainer, ItemsRow, Main } from "../../../styles/global.styles.js";
+import { Container, LibContainer, LibRow, LibText, LibTitleH1, LibTitleSubtitle, Main } from "../../../styles/global.styles.js";
 
 // Importando os componentes
 import Navbar from "../../../components/navbar/navbar.jsx";
@@ -24,21 +21,21 @@ function Buttons() {
                 <Container>
 
                     {/* Title & Subtitle */}
-                    <TitleSubtitle>
-                        <TitleH1>Buttons</TitleH1>
-                        <Text>Browse all the buttons in our components library.</Text>
-                    </TitleSubtitle>
+                    <LibTitleSubtitle>
+                        <LibTitleH1>Buttons</LibTitleH1>
+                        <LibText>Browse all the buttons in our components library.</LibText>
+                    </LibTitleSubtitle>
 
-                    {/* Items Container */}
-                    <ItemsContainer>
-                        <ItemsRow>
+                    {/* Lib Container */}
+                    <LibContainer>
+                        <LibRow>
 
                             <ComponentContainer category="buttons" name="Button">
                                 <button>Button</button>
                             </ComponentContainer>
 
-                        </ItemsRow>
-                    </ItemsContainer>
+                        </LibRow>
+                    </LibContainer>
 
                 </Container>
             </section>

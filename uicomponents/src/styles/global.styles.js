@@ -49,12 +49,36 @@ export const DoItYourWayContainerFluid = styled(ContainerFluid)`
  * Components Library
 ---------------------------------------------------------------------------------------------------------- */
 
-// Items Container
-export const ItemsContainer = styled.div.attrs({
+// Lib Tilte & Subtitle
+export const LibTitleSubtitle = styled.div.attrs({
+    className: "d-flex flex-column"
+})`
+    gap: 16px;
+    margin-bottom: 50px;
+`;
+
+// Lib TitleH1
+export const LibTitleH1 = styled.h1`
+    font-size: 56px;
+    font-weight: var(--semi-bold);
+    color: var(--secondary-dark);
+    margin: 0;
+`;
+
+// Lib Text
+export const LibText = styled.p`
+    font-size: 18px;
+    font-weight: var(--regular);
+    color: var(--secondary-medium);
+    margin: 0;
+`;
+
+// Lib Container
+export const LibContainer = styled.div.attrs({
     className: "d-flex flex-column"
 })``;
 
-// Items Row
-export const ItemsRow = styled.div.attrs({
+// Lib Row
+export const LibRow = styled.div.attrs({
     className: "row gx-4 gy-4"
 })``;

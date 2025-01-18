@@ -1,8 +1,5 @@
-// Importando os Styled Components do Componente de Accordions
-import { Text, TitleH1, TitleSubtitle } from "./accordions.js";
-
 // Importando o Styled Components Global
-import { Container, ItemsContainer, ItemsRow, Main } from "../../../styles/global.styles.js";
+import { Container, LibContainer, LibRow, LibText, LibTitleH1, LibTitleSubtitle, Main } from "../../../styles/global.styles.js";
 
 // Importando os componentes
 import Navbar from "../../../components/navbar/navbar.jsx";
@@ -24,21 +21,21 @@ function Accordions() {
                 <Container>
 
                     {/* Title & Subtitle */}
-                    <TitleSubtitle>
-                        <TitleH1>Accordions</TitleH1>
-                        <Text>Browse all the accordions in our components library.</Text>
-                    </TitleSubtitle>
+                    <LibTitleSubtitle>
+                        <LibTitleH1>Accordions</LibTitleH1>
+                        <LibText>Browse all the accordions in our components library.</LibText>
+                    </LibTitleSubtitle>
 
-                    {/* Items Container */}
-                    <ItemsContainer>
-                        <ItemsRow>
+                    {/* Lib Container */}
+                    <LibContainer>
+                        <LibRow>
 
                             <ComponentContainer category="accordions" name="Accordion">
                                 <button>Accordion</button>
                             </ComponentContainer>
 
-                        </ItemsRow>
-                    </ItemsContainer>
+                        </LibRow>
+                    </LibContainer>
 
                 </Container>
             </section>
