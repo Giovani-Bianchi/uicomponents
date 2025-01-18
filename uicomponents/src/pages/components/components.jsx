@@ -34,16 +34,16 @@ function Components() {
                         <ComponentsRow>
 
                             {/* Buttons */}
-                            <ComponentCard title="Buttons" counter="1" link="/components/buttons" />
+                            <ComponentCard title="Buttons" counter="01" link="/components/buttons" />
 
                             {/* Accordions */}
-                            <ComponentCard title="Accordions" counter="1" link="/components/accordions" />
+                            <ComponentCard title="Accordions" counter="01" link="/components/accordions" />
 
                             {/* Checkboxes */}
-                            <ComponentCard title="Checkboxes" counter="1" link="/components/checkboxes" />
+                            <ComponentCard title="Checkboxes" counter="01" link="/components/checkboxes" />
 
                             {/* Radio Buttons */}
-                            <ComponentCard title="Radio Buttons" counter="1" link="/components/radiobuttons" />
+                            <ComponentCard title="Radio Buttons" counter="01" link="/components/radiobuttons" />
 
                         </ComponentsRow>
                     </ComponentsContainer>

@@ -197,14 +197,17 @@ export const MenuTextIcon = styled.div.attrs({
 `;
 
 // Counter
-export const Counter = styled.div`
+export const Counter = styled.div.attrs({
+    className: "d-flex justify-content-center align-items-center"
+})`
     color: var(--medium);
     background-color: var(--light);
 
     font-size: 14px;
     font-weight: var(--fw-medium);
 
-    padding: 2px 4px;
+    width: 28px;
+    padding: 2px 0px;
     
     border: 1px solid var(--medium);
     border-radius: 8px;

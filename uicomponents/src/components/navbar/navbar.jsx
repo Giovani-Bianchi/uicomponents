@@ -78,16 +78,16 @@ function Navbar({ $gradient }) {
                                             <ArrowSquareOut size={22} />
                                             Buttons
                                         </MenuTextIcon>
-                                        <Counter>00</Counter>
+                                        <Counter>01</Counter>
                                     </MenuButton>
 
                                     {/* Checkboxes */}
-                                    <MenuButton href="#">
+                                    <MenuButton href="/components/checkboxes">
                                         <MenuTextIcon>
                                             <ArrowSquareOut size={22} />
                                             Checkboxes
                                         </MenuTextIcon>
-                                        <Counter>00</Counter>
+                                        <Counter>01</Counter>
                                     </MenuButton>
 
                                 </MenuRow>
@@ -101,16 +101,16 @@ function Navbar({ $gradient }) {
                                             <ArrowSquareOut size={22} />
                                             Accordions
                                         </MenuTextIcon>
-                                        <Counter>00</Counter>
+                                        <Counter>01</Counter>
                                     </MenuButton>
 
                                     {/* Radio Buttons */}
-                                    <MenuButton href="#">
+                                    <MenuButton href="/components/radiobuttons">
                                         <MenuTextIcon>
                                             <ArrowSquareOut size={22} />
                                             Radio Buttons
                                         </MenuTextIcon>
-                                        <Counter>00</Counter>
+                                        <Counter>01</Counter>
                                     </MenuButton>
 
                                 </MenuRow>
