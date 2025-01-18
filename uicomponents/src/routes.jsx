@@ -10,6 +10,7 @@ import Components from "./pages/components/components.jsx";
 import Buttons from "./pages/components_library/buttons/buttons.jsx";
 import Accordions from "./pages/components_library/accordions/accordions.jsx";
 import Checkboxes from "./pages/components_library/checkboxes/checkboxes.jsx";
+import RadioButtons from "./pages/components_library/radio_buttons/radio_buttons.jsx";
 
 export function AppRoutes() {
 
@@ -35,6 +36,9 @@ export function AppRoutes() {
 
                     {/* Rota - Tela Checkboxes */}
                     <Route path="/components/checkboxes" element={<Checkboxes />} />
+
+                    {/* Rota - Tela Radio Buttons */}
+                    <Route path="/components/radiobuttons" element={<RadioButtons />} />
 
                 </Routes>
 

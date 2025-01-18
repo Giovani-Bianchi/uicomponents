@@ -43,7 +43,7 @@ function Components() {
                             <ComponentCard title="Checkboxes" counter="1" link="/components/checkboxes" />
 
                             {/* Radio Buttons */}
-                            <ComponentCard title="Radio Buttons" counter="0" link="/components/radiobuttons" />
+                            <ComponentCard title="Radio Buttons" counter="1" link="/components/radiobuttons" />
 
                         </ComponentsRow>
                     </ComponentsContainer>
