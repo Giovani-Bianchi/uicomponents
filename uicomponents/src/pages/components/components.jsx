@@ -40,7 +40,7 @@ function Components() {
                             <ComponentCard title="Accordions" counter="1" link="/components/accordions" />
 
                             {/* Checkboxes */}
-                            <ComponentCard title="Checkboxes" counter="0" link="/components/checkboxes" />
+                            <ComponentCard title="Checkboxes" counter="1" link="/components/checkboxes" />
 
                             {/* Radio Buttons */}
                             <ComponentCard title="Radio Buttons" counter="0" link="/components/radiobuttons" />

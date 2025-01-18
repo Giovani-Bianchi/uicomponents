@@ -9,6 +9,7 @@ import Home from "./pages/home/home.jsx";
 import Components from "./pages/components/components.jsx";
 import Buttons from "./pages/components_library/buttons/buttons.jsx";
 import Accordions from "./pages/components_library/accordions/accordions.jsx";
+import Checkboxes from "./pages/components_library/checkboxes/checkboxes.jsx";
 
 export function AppRoutes() {
 
@@ -31,6 +32,9 @@ export function AppRoutes() {
 
                     {/* Rota - Tela Accordions */}
                     <Route path="/components/accordions" element={<Accordions />} />
+
+                    {/* Rota - Tela Checkboxes */}
+                    <Route path="/components/checkboxes" element={<Checkboxes />} />
 
                 </Routes>
 
