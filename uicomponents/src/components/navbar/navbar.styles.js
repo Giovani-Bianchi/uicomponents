@@ -249,8 +249,9 @@ export const DiscoverButton = styled(Link).attrs({
 `;
 
 // GitHub Button
-export const GitHubButton = styled.button.attrs({
-    className: "d-flex align-items-center"
+export const GitHubButton = styled(Link).attrs({
+    className: "d-flex align-items-center",
+    to: "https://github.com/Giovani-Bianchi/uicomponents"
 })`
     background-color: var(--secondary-dark);
 
@@ -265,6 +266,8 @@ export const GitHubButton = styled.button.attrs({
 
     padding: 4px 32px;
     gap: 6px;
+
+    text-decoration: none;
 
     box-shadow: -2px 4px 8px 0px rgba(0, 0, 0, 0.50), 0px 2px 4px 0px rgba(244, 244, 244, 0.25) inset;
 
