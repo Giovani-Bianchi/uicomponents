@@ -26,7 +26,7 @@ function Buttons() {
                     {/* Title & Subtitle */}
                     <TitleSubtitle>
                         <TitleH1>Buttons</TitleH1>
-                        <Text $textColor="var(--secondary-medium)">Browse all the buttons in our components library.</Text>
+                        <Text>Browse all the buttons in our components library.</Text>
                     </TitleSubtitle>
 
                     {/* Items Container */}
