@@ -44,3 +44,17 @@ export const DoItYourWayContainerFluid = styled(ContainerFluid)`
     padding-top: 50px;
     padding-bottom: 100px;
 `;
+
+/* --------------------------------------------------------------------------------------------------------
+ * Components Library
+---------------------------------------------------------------------------------------------------------- */
+
+// Items Container
+export const ItemsContainer = styled.div.attrs({
+    className: "d-flex flex-column"
+})``;
+
+// Items Row
+export const ItemsRow = styled.div.attrs({
+    className: "row gx-4 gy-4"
+})``;

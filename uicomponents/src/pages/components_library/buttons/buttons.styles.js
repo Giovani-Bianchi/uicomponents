@@ -34,13 +34,3 @@ export const TitleSubtitle = styled.div.attrs({
     gap: 16px;
     margin-bottom: 50px;
 `;
-
-// Buttons Container
-export const ButtonsContainer = styled.div.attrs({
-    className: "d-flex flex-column"
-})``;
-
-// Buttons Row
-export const ButtonsRow = styled.div.attrs({
-    className: "row gx-4 gy-4"
-})``;

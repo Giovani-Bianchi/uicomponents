@@ -1,8 +1,8 @@
 // Importando os Styled Components do Componente de Components
-import { ButtonsContainer, ButtonsRow, Text, TitleH1, TitleSubtitle } from "./buttons.styles.js";
+import { Text, TitleH1, TitleSubtitle } from "./buttons.styles.js";
 
 // Importando o Styled Components Global
-import { Container, Main } from "../../../styles/global.styles.js";
+import { Container, ItemsContainer, ItemsRow, Main } from "../../../styles/global.styles.js";
 
 // Importando os componentes
 import Navbar from "../../../components/navbar/navbar.jsx";
@@ -29,16 +29,16 @@ function Buttons() {
                         <Text $textColor="var(--secondary-medium)">Browse all the buttons in our components library.</Text>
                     </TitleSubtitle>
 
-                    {/* Buttons Container */}
-                    <ButtonsContainer>
-                        <ButtonsRow>
+                    {/* Items Container */}
+                    <ItemsContainer>
+                        <ItemsRow>
 
                             <ComponentContainer category="buttons" name="Button">
                                 <button>Button</button>
                             </ComponentContainer>
 
-                        </ButtonsRow>
-                    </ButtonsContainer>
+                        </ItemsRow>
+                    </ItemsContainer>
 
                 </Container>
             </section>
