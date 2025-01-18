@@ -1,5 +1,5 @@
-// Importando os Styled Components do Componente de Buttons
-import { Text, TitleH1, TitleSubtitle } from "./buttons.styles.js";
+// Importando os Styled Components do Componente de Accordions
+import { Text, TitleH1, TitleSubtitle } from "./accordions.js";
 
 // Importando o Styled Components Global
 import { Container, ItemsContainer, ItemsRow, Main } from "../../../styles/global.styles.js";
@@ -9,7 +9,7 @@ import Navbar from "../../../components/navbar/navbar.jsx";
 import Footer from "../../../components/footer/footer.jsx";
 import ComponentContainer from "../../../components/component_container/component_container.jsx";
 
-function Buttons() {
+function Accordions() {
 
     return <>
     
@@ -25,16 +25,16 @@ function Buttons() {
 
                     {/* Title & Subtitle */}
                     <TitleSubtitle>
-                        <TitleH1>Buttons</TitleH1>
-                        <Text>Browse all the buttons in our components library.</Text>
+                        <TitleH1>Accordions</TitleH1>
+                        <Text>Browse all the accordions in our components library.</Text>
                     </TitleSubtitle>
 
                     {/* Items Container */}
                     <ItemsContainer>
                         <ItemsRow>
 
-                            <ComponentContainer category="buttons" name="Button">
-                                <button>Button</button>
+                            <ComponentContainer category="accordions" name="Accordion">
+                                <button>Accordion</button>
                             </ComponentContainer>
 
                         </ItemsRow>
@@ -52,5 +52,5 @@ function Buttons() {
 
 }
 
-// Exportando o componente Buttons
-export default Buttons;
+// Exportando o componente Accordions
+export default Accordions;

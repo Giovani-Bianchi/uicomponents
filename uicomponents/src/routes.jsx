@@ -8,6 +8,7 @@ import GlobalLayout from "./globalLayout.jsx";
 import Home from "./pages/home/home.jsx";
 import Components from "./pages/components/components.jsx";
 import Buttons from "./pages/components_library/buttons/buttons.jsx";
+import Accordions from "./pages/components_library/accordions/accordions.jsx";
 
 export function AppRoutes() {
 
@@ -23,8 +24,13 @@ export function AppRoutes() {
                     {/* Rota - Tela Components */}
                     <Route path="/components" element={<Components />} />
 
+                    {/* Library Components */}
+
                     {/* Rota - Tela Buttons */}
                     <Route path="/components/buttons" element={<Buttons />} />
+
+                    {/* Rota - Tela Accordions */}
+                    <Route path="/components/accordions" element={<Accordions />} />
 
                 </Routes>
 

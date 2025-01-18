@@ -34,10 +34,10 @@ function Components() {
                         <ComponentsRow>
 
                             {/* Buttons */}
-                            <ComponentCard title="Buttons" counter="0" link="/components/buttons" />
+                            <ComponentCard title="Buttons" counter="1" link="/components/buttons" />
 
                             {/* Accordions */}
-                            <ComponentCard title="Accordions" counter="0" link="/components/accordions" />
+                            <ComponentCard title="Accordions" counter="1" link="/components/accordions" />
 
                             {/* Checkboxes */}
                             <ComponentCard title="Checkboxes" counter="0" link="/components/checkboxes" />

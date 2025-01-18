@@ -105,10 +105,10 @@ section {
 }
 
 /* --------------------------------------------------------------------------------------------------------
- * Buttons
+ * Components Library
 ---------------------------------------------------------------------------------------------------------- */
 
-/* Definindo 50px de espaçamento superior para a components section */
-#buttons-section {
+/* Definindo 50px de espaçamento superior para a library section */
+#library-section {
     padding-top: 50px;
 }

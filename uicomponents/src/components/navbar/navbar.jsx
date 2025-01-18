@@ -96,7 +96,7 @@ function Navbar({ $gradient }) {
                                 <MenuRow>
 
                                     {/* Accordions */}
-                                    <MenuButton href="#">
+                                    <MenuButton href="/components/accordions">
                                         <MenuTextIcon>
                                             <ArrowSquareOut size={22} />
                                             Accordions
