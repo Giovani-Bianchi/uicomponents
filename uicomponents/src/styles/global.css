@@ -75,6 +75,51 @@ section {
     padding-bottom: 50px;
 }
 
+/* Alterando a font size do pre code */
+pre code {
+    font-size: 14px !important;
+}
+
+/* Customizando a tooltip */
+.custom-tooltip {
+    --bs-tooltip-bg: var(--secondary-dark);
+    --bs-tooltip-color: var(--gray);
+    --bs-tooltip-opacity: 1;
+
+    margin-bottom: 5px !important;
+}
+
+/* --------------------------------------------------------------------------------------------------------
+ * Scrollbar - Pre code
+---------------------------------------------------------------------------------------------------------- */
+
+pre {
+    --sb-track-color: #272822;
+    --sb-thumb-color: #b54bd2;
+    --sb-size: 7px;
+}
+  
+pre::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+  
+pre::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 0px;
+}
+  
+pre::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 0px;
+    border: 1px solid var(--sb-track-color);
+}
+  
+@supports not selector(::-webkit-scrollbar) {
+    pre {
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
 /* --------------------------------------------------------------------------------------------------------
  * Home
 ---------------------------------------------------------------------------------------------------------- */
@@ -110,5 +155,14 @@ section {
 
 /* Definindo 50px de espaçamento superior para a library section */
 #library-section {
+    padding-top: 50px;
+}
+
+/* --------------------------------------------------------------------------------------------------------
+ * Component
+---------------------------------------------------------------------------------------------------------- */
+
+/* Definindo 50px de espaçamento superior para a component section */
+#component-section {
     padding-top: 50px;
 }
