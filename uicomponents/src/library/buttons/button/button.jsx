@@ -1,8 +1,8 @@
 // Importações do react
 import { useEffect, useState } from "react";
 
-// Importando a função de inicializar as tooltips do globalLayout
-import { initializeTooltips } from "../../../globalLayout.jsx";
+// Importando as funções e constantes do Componente de Button
+import { componentJsCode, componentJsxCode, handleActiveTab, handleCode, handleCopy, initializeTooltips } from "./button.functions.js";
 
 // Importando os Styled Components do Componente de Button
 import { Code, Component, CopyButton, Pre, Row, Tab, Tabs, TitleH1 } from "./button.styles.js"
@@ -25,23 +25,6 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/components/prism-jsx';
 
-// Código JSX do componente
-const componentJsxCode = 
-`const greeting = 'Hello, world!';
-console.log(greeting);
-
-function sayHello() {
-    return greeting;
-}
-`;
-
-// Código JS (Style) do componente
-const componentJsCode = 
-`function sayHello() {
-    return greeting;
-}
-`;
-
 function ComponentButton() {
 
     // Capturando a url da página
@@ -52,63 +35,6 @@ function ComponentButton() {
 
     // Variável de estado para armazenar o código
     const [code, setCode] = useState(componentJsxCode);
-
-    // Função que faz a alteração do código exibido na tela
-    function handleCode(codeSnippet) {
-        setCode(codeSnippet);
-    }
-
-    // Função que adiciona a classe active à tab com focus
-    function handleActiveTab(e) {
-
-        // Selecionando todas as tabs
-        const activeTabs = document.querySelectorAll(".tab");
-
-        // Removendo a classe active de todas as tabs
-        activeTabs.forEach(tab => tab.classList.remove("active"));
-
-        // Adicionando a classe active na tab clicada
-        e.target.classList.add('active');
-
-    }
-
-    // Função para copiar o código para a área de transferência
-    function handleCopy() {
-
-        // Copia o código para a área de transferência
-        navigator.clipboard.writeText(code)
-
-        // Após copiado o código, executa isso
-        .then(() => {
-
-            // Seleciona o botão de copiar
-            const copyButton = document.getElementById("copy-button");
-
-            // Seleciona a instância de tooltip do botão de copiar
-            const tooltipInstance = bootstrap.Tooltip.getInstance(copyButton);
-
-            // Se a instância de tooltip existir, atualiza o texto dela
-            if (tooltipInstance) {
-                tooltipInstance.setContent({ '.tooltip-inner' : 'Copied!' });
-                tooltipInstance.show();
-            }
-
-            // Aguarda 2 segundos antes de esconder a tooltip e atualizar o texto dela para o estado inicial
-            setTimeout(() => {
-                if (tooltipInstance) {
-                    tooltipInstance.hide();
-                    tooltipInstance.setContent({ '.tooltip-inner' : 'Copy code' });
-                }
-            }, 2000);
-
-        })
-        
-        // Caso de erro, mostrar mensagem
-        .catch(err => {
-            alert("Erro ao copiar o código: ", err);
-        });
-
-    }
 
     // Inicializando as tooltips
     useEffect(() => {
@@ -150,13 +76,13 @@ function ComponentButton() {
                             <Tabs>
                                 
                                 {/* React Tab */}
-                                <Tab className="active" onClick={() => handleCode(componentJsxCode)} onFocus={(e) => handleActiveTab(e)}>
+                                <Tab className="active" onClick={() => handleCode(setCode, componentJsxCode)} onFocus={(e) => handleActiveTab(e)}>
                                     <FaReact size={20} />
                                     JSX
                                 </Tab>
 
                                 {/* JS Tab */}
-                                <Tab onClick={() => handleCode(componentJsCode)} onFocus={(e) => handleActiveTab(e)}>
+                                <Tab onClick={() => handleCode(setCode, componentJsCode)} onFocus={(e) => handleActiveTab(e)}>
                                     <FaJs size={20} />
                                     JavaScript
                                 </Tab>
@@ -164,7 +90,7 @@ function ComponentButton() {
                             </Tabs>
 
                             {/* Copy */}
-                            <CopyButton onClick={() => handleCopy()} id="copy-button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Copy code" data-bs-custom-class="custom-tooltip">
+                            <CopyButton onClick={() => handleCopy(code)} id="copy-button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Copy code" data-bs-custom-class="custom-tooltip">
                                 <CopySimple size={22} />
                             </CopyButton>
         
