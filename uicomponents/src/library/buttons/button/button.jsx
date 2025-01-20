@@ -36,6 +36,9 @@ function ComponentButton() {
     // Variável de estado para armazenar o código
     const [code, setCode] = useState(componentJsxCode);
 
+    // Variável de estado par armazenar o ícone do botão de copiar
+    const [copyIcon, setCopyIcon] = useState(<CopySimple size={22} />);
+
     // Inicializando as tooltips
     useEffect(() => {
         initializeTooltips();
@@ -90,8 +93,8 @@ function ComponentButton() {
                             </Tabs>
 
                             {/* Copy */}
-                            <CopyButton onClick={() => handleCopy(code)} id="copy-button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Copy code" data-bs-custom-class="custom-tooltip">
-                                <CopySimple size={22} />
+                            <CopyButton onClick={() => handleCopy(code, setCopyIcon)} id="copy-button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Copy code" data-bs-custom-class="custom-tooltip">
+                                {copyIcon}
                             </CopyButton>
         
                             {/* Code Visualizer */}

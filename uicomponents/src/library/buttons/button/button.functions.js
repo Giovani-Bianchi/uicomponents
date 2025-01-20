@@ -1,3 +1,9 @@
+// Importação do react
+import React from "react";
+
+// Importações do phosphor-icons
+import { Check, CopySimple } from "@phosphor-icons/react";
+
 /* --------------------------------------------------------------------------------------------------------
  * Component Codes
 ---------------------------------------------------------------------------------------------------------- */
@@ -60,7 +66,7 @@ export function handleActiveTab(e) {
  * Função para copiar o código para a área de transferência
  * @param code - código que será copiado
  */
-export function handleCopy(code) {
+export function handleCopy(code, setCopyIcon) {
 
     // Copia o código para a área de transferência
     navigator.clipboard.writeText(code)
@@ -74,6 +80,9 @@ export function handleCopy(code) {
         // Seleciona a instância de tooltip do botão de copiar
         const tooltipInstance = bootstrap.Tooltip.getInstance(copyButton);
 
+        // Altera o ícone para o ícone de cópia bem-sucedida
+        setCopyIcon(() => React.createElement(Check, { size: 22 }));
+
         // Se a instância de tooltip existir, atualiza o texto dela
         if (tooltipInstance) {
             tooltipInstance.setContent({ '.tooltip-inner' : 'Copied!' });
@@ -82,10 +91,16 @@ export function handleCopy(code) {
 
         // Aguarda 2 segundos antes de esconder a tooltip e atualizar o texto dela para o estado inicial
         setTimeout(() => {
+
+            // Retorna ao ícone inicial
+            setCopyIcon(() => React.createElement(CopySimple, { size: 22 }));
+
+            // Esconde e atualiza o texto
             if (tooltipInstance) {
                 tooltipInstance.hide();
                 tooltipInstance.setContent({ '.tooltip-inner' : 'Copy code' });
             }
+
         }, 2000);
 
     })
