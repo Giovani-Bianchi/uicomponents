@@ -41,7 +41,7 @@ export function AppRoutes() {
                     {/* Rota - Tela Radio Buttons */}
                     <Route path="/components/radiobuttons" element={<RadioButtons />} />
 
-                    {/* Rota - Component*/}
+                    {/* Rota - Component */}
                     <Route path="/components/:category/:name" element={<Component />} />
 
                 </Routes>

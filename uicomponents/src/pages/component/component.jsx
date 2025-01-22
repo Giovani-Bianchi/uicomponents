@@ -28,8 +28,13 @@ import 'prismjs/components/prism-jsx';
 import Navbar from "../../components/navbar/navbar.jsx";
 import Footer from "../../components/footer/footer.jsx";
 
-// Importando os components
-import { components } from "../../constants/buttons.js";
+// Importando os Components separados por categoria
+import { buttonsComponents } from "../../constants/buttons.js";
+
+// Selecionando a biblioteca de components baseado na categoria
+const components = {
+    buttons: buttonsComponents
+}
 
 function Component() {
 
@@ -37,10 +42,10 @@ function Component() {
     const location = useLocation();
 
     // Obtendo as informações do location state
-    const { name } = location.state;
+    const { category, name } = location.state;
 
     // Obtendo as informações do componente
-    const { component: SelectedComponent, jsxCode, jsCode } = components[name];
+    const { component: SelectedComponent, jsxCode, jsCode } = components[category][name];
 
     // Variável de estado para armazenar o código
     const [code, setCode] = useState(jsxCode);

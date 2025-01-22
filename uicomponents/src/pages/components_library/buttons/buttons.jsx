@@ -6,8 +6,8 @@ import Navbar from "../../../components/navbar/navbar.jsx";
 import Footer from "../../../components/footer/footer.jsx";
 import ComponentContainer from "../../../components/component_container/component_container.jsx";
 
-// Importando os components
-import { components } from "../../../constants/buttons.js";
+// Importando os buttonsComponents
+import { buttonsComponents } from "../../../constants/buttons.js";
 
 function Buttons() {
 
@@ -35,7 +35,7 @@ function Buttons() {
 
                             {/* CTAButton */}
                             <ComponentContainer category="buttons" name="CTAButton">
-                                {<components.CTAButton.component/>}
+                                {<buttonsComponents.CTAButton.component/>}
                             </ComponentContainer>
 
                         </LibRow>

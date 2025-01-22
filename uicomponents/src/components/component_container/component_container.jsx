@@ -15,9 +15,9 @@ function ComponentContainer({children, category, name}) {
     // Lógica do navigate
     const handleNavigate = () => {
 
-        // Redirecionando o usuário para a tela do componente, passando o nome do componente
+        // Redirecionando o usuário para a tela do componente, passando a categoria e o nome do componente
         navigate("/components/" + category + "/" + name, {
-            state: { name: name }
+            state: { category: category, name: name }
         });
 
     }
