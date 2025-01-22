@@ -121,7 +121,7 @@ function Navbar({ $gradient }) {
                     </ComponentsDropdown>
 
                     {/* Link âncora para o Footer */}
-                    <StyledLink>Contact</StyledLink>
+                    <StyledLink as="a" href="#contact" >Contact</StyledLink>
 
                 </NavbarItems>
 

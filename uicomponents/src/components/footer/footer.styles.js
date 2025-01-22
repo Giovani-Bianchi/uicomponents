@@ -9,7 +9,9 @@ import { Link } from "react-router-dom";
 ---------------------------------------------------------------------------------------------------------- */
 
 // Footer
-export const FooterContainer = styled.footer`
+export const FooterContainer = styled.footer.attrs({
+    id: "contact"
+})`
     padding: 50px 0px;
     background: linear-gradient(270deg, rgba(181, 75, 210, 0.10) 0%, rgba(247, 235, 252, 0.10) 100%);
 `;
