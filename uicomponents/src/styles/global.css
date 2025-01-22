@@ -55,6 +55,12 @@
     flex-direction: column;
 }
 
+/* Id para o ToTopButton */
+#header {
+    position: absolute;
+    top: 0;
+}
+
 /* Definindo flex 1 na main */
 main {
     flex: 1;

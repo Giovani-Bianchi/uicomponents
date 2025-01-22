@@ -35,6 +35,40 @@ export const FlexCenterDiv = styled.div.attrs({
 `;
 
 /* --------------------------------------------------------------------------------------------------------
+ * To Top Button
+---------------------------------------------------------------------------------------------------------- */
+
+// To Top Button
+export const ToTopButton = styled.button.attrs({
+    className: "d-flex justify-content-center align-items-center"
+})`
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: var(--pure);
+    color: var(--lightest);
+
+    border: 1px solid var(--medium);
+    border-radius: 50%;
+
+    transform: translateX(100px);
+
+    transition: background-color 0.2s ease-in-out, transform 0.5s ease-in-out;
+
+    // Hover State
+    &:hover {
+        background-color: var(--medium);
+    }
+
+    // Se isScrolled for true, o button será movido para a posição inicial
+    ${props => props.$isScrolled ? "transform: translateX(0px);" : ""};
+`;
+
+/* --------------------------------------------------------------------------------------------------------
  * Home
 ---------------------------------------------------------------------------------------------------------- */
 

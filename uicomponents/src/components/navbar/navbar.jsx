@@ -18,7 +18,7 @@ import logo from "../../assets/brand/logo-black-transparent.png"
 
 function Navbar({ $gradient }) {
 
-    // Define o estado 'isScrolled' para armazenar se o usuário já rolou a página além de 50px
+    // Define o estado 'isScrolled' para armazenar se o usuário já rolou a página além de 0px
     const [isScrolled, setIsScrolled] = useState(false);
 
     // useEffect para lidar com o evento de rolagem da página
@@ -41,6 +41,9 @@ function Navbar({ $gradient }) {
     }, []);
 
     return <>
+
+        {/* Div para o ToTopButton */}
+        <div id="header"></div>
     
         <Header $gradient={$gradient} className={isScrolled ? 'scrolled' : ''}>
             <Nav>
