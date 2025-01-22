@@ -1,14 +1,17 @@
 // Importações do react
 import { useEffect, useState } from "react";
 
-// Importando as funções e constantes do Componente de Button
-import { componentJsCode, componentJsxCode, handleActiveTab, handleCode, handleCopy, initializeTooltips } from "./button.functions.js";
+// Importações do react-router-dom
+import { useLocation } from "react-router-dom";
 
-// Importando os Styled Components do Componente de Button
-import { Code, Component, CopyButton, Pre, Row, Tab, Tabs, TitleH1 } from "./button.styles.js"
+// Importando as funções do Component
+import { handleActiveTab, handleCode, handleCopy, initializeTooltips } from "./component.functions.js";
+
+// Importando os Styled Components do Component
+import { Code, ComponentBox, CopyButton, Pre, Row, Tab, Tabs, TitleH1 } from "./component.styles.js";
 
 // Importando o Styled Components Global
-import { Container, Main } from "../../../styles/global.styles.js";
+import { Container, Main } from "../../styles/global.styles.js";
 
 // Importações do phosphor-icons
 import { CopySimple } from "@phosphor-icons/react";
@@ -16,25 +19,31 @@ import { CopySimple } from "@phosphor-icons/react";
 // Importações do react-icons
 import { FaJs, FaReact } from "react-icons/fa";
 
-// Importando os componentes
-import Navbar from "../../../components/navbar/navbar.jsx";
-import Footer from "../../../components/footer/footer.jsx";
-
 // Importações do Prism.js
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/components/prism-jsx';
 
-function ComponentButton() {
+// Importando os componentes
+import Navbar from "../../components/navbar/navbar.jsx";
+import Footer from "../../components/footer/footer.jsx";
 
-    // Capturando a url da página
-    const url = window.location.pathname.split("/");
-    
-    // Capturando o nome com base na url da página
-    const name = url[3];
+// Importando os components
+import { components } from "../../constants/buttons.js";
+
+function Component() {
+
+    // Instanciando o location
+    const location = useLocation();
+
+    // Obtendo as informações do location state
+    const { name } = location.state;
+
+    // Obtendo as informações do componente
+    const { component: SelectedComponent, jsxCode, jsCode } = components[name];
 
     // Variável de estado para armazenar o código
-    const [code, setCode] = useState(componentJsxCode);
+    const [code, setCode] = useState(jsxCode);
 
     // Variável de estado par armazenar o ícone do botão de copiar
     const [copyIcon, setCopyIcon] = useState(<CopySimple size={22} />);
@@ -50,7 +59,7 @@ function ComponentButton() {
     }, [code]);
 
     return <>
-    
+
         {/* Importação da Navbar */}
         <Navbar $gradient />
 
@@ -67,25 +76,25 @@ function ComponentButton() {
                     {/* Component - Code Visualizer */}
                     <Row>
 
-                        {/* Component */}
-                        <Component>
-                            <button>Button</button>
-                        </Component>
+                        {/* ComponentBox */}
+                        <ComponentBox>
+                            {SelectedComponent && <SelectedComponent />}
+                        </ComponentBox>
 
                         {/* Code */}
                         <Code>
 
                             {/* Tabs */}
                             <Tabs>
-                                
+                                            
                                 {/* React Tab */}
-                                <Tab className="active" onClick={() => handleCode(setCode, componentJsxCode)} onFocus={(e) => handleActiveTab(e)}>
+                                <Tab className="active" onClick={() => handleCode(setCode, jsxCode)} onFocus={(e) => handleActiveTab(e)}>
                                     <FaReact size={20} />
                                     JSX
                                 </Tab>
 
                                 {/* JS Tab */}
-                                <Tab onClick={() => handleCode(setCode, componentJsCode)} onFocus={(e) => handleActiveTab(e)}>
+                                <Tab onClick={() => handleCode(setCode, jsCode)} onFocus={(e) => handleActiveTab(e)}>
                                     <FaJs size={20} />
                                     JavaScript
                                 </Tab>
@@ -96,7 +105,7 @@ function ComponentButton() {
                             <CopyButton onClick={() => handleCopy(code, setCopyIcon)} id="copy-button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Copy code" data-bs-custom-class="custom-tooltip">
                                 {copyIcon}
                             </CopyButton>
-        
+                    
                             {/* Code Visualizer */}
                             <Pre>
                                 <code className="language-jsx">
@@ -115,10 +124,10 @@ function ComponentButton() {
 
         {/* Importação do Footer */}
         <Footer />
-    
+
     </>
 
 }
 
-// Exportando o compontente ComponentButton
-export default ComponentButton;
+// Exportando o Component
+export default Component;

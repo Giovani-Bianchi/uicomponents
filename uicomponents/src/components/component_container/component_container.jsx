@@ -5,9 +5,22 @@ import { Brand, Component, ComponentBox, CTA, Text } from "./component_container
 import { ArrowRight } from "@phosphor-icons/react";
 
 // Importações do react-router-dom
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function ComponentContainer({children, category, name}) {
+
+    // Instanciando o navigate
+    const navigate = useNavigate();
+
+    // Lógica do navigate
+    const handleNavigate = () => {
+
+        // Redirecionando o usuário para a tela do componente, passando o nome do componente
+        navigate("/components/" + category + "/" + name, {
+            state: { name: name }
+        });
+
+    }
     
     return <>
     
@@ -15,7 +28,7 @@ function ComponentContainer({children, category, name}) {
         <ComponentBox>
 
             {/* Component */}
-            <Component as={Link} to={"/components/" + category + "/" + name}>
+            <Component onClick={handleNavigate}>
 
                 {/* Brand */}
                 <Brand />

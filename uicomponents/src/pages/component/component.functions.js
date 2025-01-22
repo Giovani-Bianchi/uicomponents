@@ -5,27 +5,6 @@ import React from "react";
 import { Check, CopySimple } from "@phosphor-icons/react";
 
 /* --------------------------------------------------------------------------------------------------------
- * Component Codes
----------------------------------------------------------------------------------------------------------- */
-
-// Código JSX do componente
-export const componentJsxCode = 
-`const greeting = 'Hello, world!';
-console.log(greeting);
-
-function sayHello() {
-    return greeting;
-}
-`;
-
-// Código JS (Style) do componente
-export const componentJsCode = 
-`function sayHello() {
-    return greeting;
-}
-`;
-
-/* --------------------------------------------------------------------------------------------------------
  * Functions
 ---------------------------------------------------------------------------------------------------------- */
 

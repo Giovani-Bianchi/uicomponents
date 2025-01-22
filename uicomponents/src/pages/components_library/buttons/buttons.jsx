@@ -6,6 +6,9 @@ import Navbar from "../../../components/navbar/navbar.jsx";
 import Footer from "../../../components/footer/footer.jsx";
 import ComponentContainer from "../../../components/component_container/component_container.jsx";
 
+// Importando os components
+import { components } from "../../../constants/buttons.js";
+
 function Buttons() {
 
     return <>
@@ -30,8 +33,9 @@ function Buttons() {
                     <LibContainer>
                         <LibRow>
 
-                            <ComponentContainer category="buttons" name="Button">
-                                <button>Button</button>
+                            {/* CTAButton */}
+                            <ComponentContainer category="buttons" name="CTAButton">
+                                {<components.CTAButton.component/>}
                             </ComponentContainer>
 
                         </LibRow>

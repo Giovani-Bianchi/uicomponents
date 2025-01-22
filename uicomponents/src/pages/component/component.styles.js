@@ -23,7 +23,7 @@ export const Row = styled.div.attrs({
 `;
 
 // Component
-export const Component = styled.div.attrs({
+export const ComponentBox = styled.div.attrs({
     className: "col-md-6 d-flex justify-content-center align-items-center" 
 })`
     height: 500px;
